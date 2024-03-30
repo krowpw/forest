@@ -1,50 +1,67 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.layers{
-    perspective: 1000px;
-    overflow: hidden;
+.layers {
+  perspective: 1000px;
+  overflow: hidden;
 }
 :root {
-    --moveX: 10deg;
-    --moveY: 10deg;
+  --moveX: 10deg;
+  --moveY: 10deg;
 }
 
-.layers-container{
-    height: 100vh;
-    perspective: 1000px;
-    transform-style: preserve-3d;
-    will-change: transform;
-    transform: rotateX(var(--moveY)) rotateY(var(--moveX));
+.layers-container {
+  height: 100vh;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transform: rotateX(var(--moveY)) rotateY(var(--moveX));
 }
-
-
 
 .layer-item {
-    position: absolute;
-    inset: -5vw;
-    background-size: cover;
-    background-position: centers;
+  position: absolute;
+  inset: -5vw;
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
 }
 
 .item-1 {
-    transform: translateZ(-50px);
+  transform: translateZ(-50px) scale(1.1);
 }
 .item-2 {
-    transform: translateZ(100px);
+  transform: translateZ(100px);
 }
 .item-3 {
-    transform: translateZ(150px);
+  transform: translateZ(150px);
 }
 .item-4 {
-    transform: translateZ(200px);
+  transform: translateZ(200px);
 }
 .item-5 {
-    transform: translateZ(250px);
+  transform: translateZ(250px);
 }
 .item-6 {
-    transform: translateZ(350px);
+  transform: translateZ(350px);
+}
+
+.item-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  pointer-events: all;
+}
+.logo {
+  height: 150px;
+  width: 100px;
+}
+.btn-sound {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
 }
